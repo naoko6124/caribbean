@@ -1,21 +1,29 @@
 package caribbean;
 
+import caribbean.item.PirateBook;
 import net.fabricmc.api.ModInitializer;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 
 public class ExampleMod implements ModInitializer {
-    // This logger is used to write text to the console and the log file.
-    // It is considered best practice to use your mod id as the logger's name.
-    // That way, it's clear which mod wrote info, warnings, and errors.
-    public static final Logger LOGGER = LogManager.getLogger("caribbean");
+    public static PirateBook pirate_book = new PirateBook(new FabricItemSettings().maxCount(1));
+    private static final ItemGroup caribbean_group = FabricItemGroupBuilder.create(
+            new Identifier("caribbean", "caribbean_group"))
+            .icon(() -> new ItemStack(pirate_book))
+            .appendItems(stacks -> {
+                stacks.add(new ItemStack(pirate_book));
+            })
+            .build();
     @Override
     public void onInitialize() {
-        // This code runs as soon as Minecraft is in a mod-load-ready state.
-        // However, some things (like resources) may still be uninitialized.
-        // Proceed with mild caution.
-
-        LOGGER.info("Hello Fabric world!");
+        Registry.register(
+                Registry.ITEM,
+                new Identifier("caribbean", "pirate_book"),
+                pirate_book
+        );
     }
 }
