@@ -1,7 +1,10 @@
 package caribbean.item;
 
+import caribbean.gui.PirateBookGui;
+import io.github.cottonmc.cotton.gui.client.CottonClientScreen;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -18,9 +21,7 @@ public class PirateBook extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        if (world.isClient()) return super.use(world, user, hand);
-
-        //ServerPlayNetworking.send((ServerPlayerEntity) user, new Identifier("tutorial", "pirate_book_open"), PacketByteBufs.empty());
-        return TypedActionResult.success(user.getStackInHand(hand));
+        MinecraftClient.getInstance().openScreen(new CottonClientScreen(new PirateBookGui()));
+        return super.use(world, user, hand);
     }
 }
