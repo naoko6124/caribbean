@@ -30,9 +30,9 @@ public class ExampleMod implements ModInitializer {
                 new Identifier("caribbean", "pirate_book"),
                 pirate_book
         );
-        Registry.register(Registry.ITEM,new Identifier("caribean","fabric_helmet"),new BaseArmor(FABRIC_ARMOR, EquipmentSlot.HEAD));
-        Registry.register(Registry.ITEM,new Identifier("caribean","fabric_chestplate"),new BaseArmor(FABRIC_ARMOR, EquipmentSlot.CHEST));
-        Registry.register(Registry.ITEM,new Identifier("caribean","fabric_leggings"),new BaseArmor(FABRIC_ARMOR, EquipmentSlot.LEGS));
-        Registry.register(Registry.ITEM,new Identifier("caribean","fabric_boots"),new BaseArmor(FABRIC_ARMOR, EquipmentSlot.FEET));
+        Registry.register(Registry.ITEM,new Identifier("caribean","pirate_helmet"),new BaseArmor(FABRIC_ARMOR, EquipmentSlot.HEAD));
+        Registry.register(Registry.ITEM,new Identifier("caribean","pirate_chestplate"),new BaseArmor(FABRIC_ARMOR, EquipmentSlot.CHEST));
+        Registry.register(Registry.ITEM,new Identifier("caribean","pirate_leggings"),new BaseArmor(FABRIC_ARMOR, EquipmentSlot.LEGS));
+        Registry.register(Registry.ITEM,new Identifier("caribean","pirate_boots"),new BaseArmor(FABRIC_ARMOR, EquipmentSlot.FEET));
     }
 }
