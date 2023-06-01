@@ -1,5 +1,9 @@
 package caribbean.gui;
 
+import caribbean.datastorage.DataStorage;
+import caribbean.datastorage.Island;
+import caribbean.datastructures.ListaNo;
+import io.github.cottonmc.cotton.gui.client.CottonClientScreen;
 import io.github.cottonmc.cotton.gui.client.LightweightGuiDescription;
 import io.github.cottonmc.cotton.gui.widget.*;
 import io.github.cottonmc.cotton.gui.widget.data.HorizontalAlignment;
@@ -63,17 +67,27 @@ public class PirateBookGui extends LightweightGuiDescription {
         };
         WListPanel<String, WPlainPanel> list = new WListPanel<>(data, WPlainPanel::new, configurator);
         list.setListItemHeight(12);
-        root.add(list, 0, 4, 7, 6);
+        list.setSize(7, 6);
+        //root.add(list, 0, 4, 7, 6);
 
         WButton button = new WButton(Text.of("Add"));
         button.setOnClick(() -> {
-            String s = txtIslandName.getText();
-            if (!s.isEmpty()) {
-                data.add(s);
-                list.layout();
+            String nome = txtIslandName.getText();
+            int x = Integer.parseInt(txtX.getText());
+            int y = Integer.parseInt(txtY.getText());
+            int z = Integer.parseInt(txtZ.getText());
+            if (!nome.isEmpty()) {
+                ListaNo node = new ListaNo(new Island(nome, x, y, z));
+                DataStorage.getInstance().lista.insereNo_fim(node);
             }
         });
         root.add(button, 0, 3, 4, 1);
+
+        WButton button2 = new WButton(Text.of("Ilhas Registradas"));
+        button2.setOnClick(() -> {
+            MinecraftClient.getInstance().openScreen(new CottonClientScreen(new ShowIslandsGui()));
+        });
+        root.add(button2, 0, 5, 6, 1);
 
         root.validate(this);
     }
