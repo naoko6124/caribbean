@@ -15,8 +15,8 @@ import net.minecraft.util.math.Vec3d;
 import java.util.ArrayList;
 import java.util.function.BiConsumer;
 
-public class PirateBookGui extends LightweightGuiDescription {
-    public PirateBookGui() {
+public class IslandsBookGui extends LightweightGuiDescription {
+    public IslandsBookGui() {
         WGridPanel root = new WGridPanel();
         setRootPanel(root);
         root.setSize(256, 160);
