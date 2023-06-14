@@ -1,0 +1,41 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "caribbean:item/piratecompass_16"
+    },
+    "overrides": [
+        { "predicate": { "angle": 0.000000 }, "model": "caribbean:item/piratecompass" },
+        { "predicate": { "angle": 0.015625 }, "model": "caribbean:item/piratecompass_17" },
+        { "predicate": { "angle": 0.046875 }, "model": "caribbean:item/piratecompass_18" },
+        { "predicate": { "angle": 0.078125 }, "model": "caribbean:item/piratecompass_19" },
+        { "predicate": { "angle": 0.109375 }, "model": "caribbean:item/piratecompass_20" },
+        { "predicate": { "angle": 0.140625 }, "model": "caribbean:item/piratecompass_21" },
+        { "predicate": { "angle": 0.171875 }, "model": "caribbean:item/piratecompass_22" },
+        { "predicate": { "angle": 0.203125 }, "model": "caribbean:item/piratecompass_23" },
+        { "predicate": { "angle": 0.234375 }, "model": "caribbean:item/piratecompass_24" },
+        { "predicate": { "angle": 0.265625 }, "model": "caribbean:item/piratecompass_25" },
+        { "predicate": { "angle": 0.296875 }, "model": "caribbean:item/piratecompass_26" },
+        { "predicate": { "angle": 0.328125 }, "model": "caribbean:item/piratecompass_27" },
+        { "predicate": { "angle": 0.359375 }, "model": "caribbean:item/piratecompass_28" },
+        { "predicate": { "angle": 0.390625 }, "model": "caribbean:item/piratecompass_29" },
+        { "predicate": { "angle": 0.421875 }, "model": "caribbean:item/piratecompass_30" },
+        { "predicate": { "angle": 0.453125 }, "model": "caribbean:item/piratecompass_31" },
+        { "predicate": { "angle": 0.484375 }, "model": "caribbean:item/piratecompass_00" },
+        { "predicate": { "angle": 0.515625 }, "model": "caribbean:item/piratecompass_01" },
+        { "predicate": { "angle": 0.546875 }, "model": "caribbean:item/piratecompass_02" },
+        { "predicate": { "angle": 0.578125 }, "model": "caribbean:item/piratecompass_03" },
+        { "predicate": { "angle": 0.609375 }, "model": "caribbean:item/piratecompass_04" },
+        { "predicate": { "angle": 0.640625 }, "model": "caribbean:item/piratecompass_05" },
+        { "predicate": { "angle": 0.671875 }, "model": "caribbean:item/piratecompass_06" },
+        { "predicate": { "angle": 0.703125 }, "model": "caribbean:item/piratecompass_07" },
+        { "predicate": { "angle": 0.734375 }, "model": "caribbean:item/piratecompass_08" },
+        { "predicate": { "angle": 0.765625 }, "model": "caribbean:item/piratecompass_09" },
+        { "predicate": { "angle": 0.796875 }, "model": "caribbean:item/piratecompass_10" },
+        { "predicate": { "angle": 0.828125 }, "model": "caribbean:item/piratecompass_11" },
+        { "predicate": { "angle": 0.859375 }, "model": "caribbean:item/piratecompass_12" },
+        { "predicate": { "angle": 0.890625 }, "model": "caribbean:item/piratecompass_13" },
+        { "predicate": { "angle": 0.921875 }, "model": "caribbean:item/piratecompass_14" },
+        { "predicate": { "angle": 0.953125 }, "model": "caribbean:item/piratecompass_15" },
+        { "predicate": { "angle": 0.984375 }, "model": "caribbean:item/piratecompass" }
+    ]
+}
