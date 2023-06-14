@@ -11,6 +11,7 @@ import io.github.cottonmc.cotton.gui.widget.data.HorizontalAlignment;
 import io.github.cottonmc.cotton.gui.widget.data.VerticalAlignment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Vec3d;
 
 import javax.xml.crypto.Data;
@@ -33,8 +34,10 @@ public class PathBookGui extends LightweightGuiDescription {
         WGridPanel root = new WGridPanel();
         setRootPanel(root);
         root.setSize(256, 160);
+        WSprite icon = new WSprite(new Identifier("caribbean:textures/testebg.png"));
+        root.add(icon, 0, 0, 15, 10);
 
-        WLabel lblTitle = new WLabel(Text.of("Islands"), 0x000000);
+        WLabel lblTitle = new WLabel(Text.of("Path"), 0x000000);
         root.add(lblTitle, 0, 0, 2, 1);
 
         lblNome = new WLabel(Text.of("Name: "));

@@ -1,6 +1,7 @@
 package caribbean;
 
 import caribbean.datastorage.DataStorage;
+import caribbean.datastorage.Island;
 import caribbean.item.PirateCompass;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
@@ -10,6 +11,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.decoration.ItemFrameEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -72,6 +74,19 @@ public class CaribbeanModClient implements ClientModInitializer {
                         pos = new BlockPos(DataStorage.getInstance().currentIsland.x, 0, DataStorage.getInstance().currentIsland.z);
                     } else {
                         pos = world.getSpawnPos();
+                    }
+                    double xdif = pos.getX() - entity.getPos().x;
+                    double zdif = pos.getZ() - entity.getPos().z;
+                    double distance = Math.sqrt(Math.pow(xdif, 2) + Math.pow(zdif, 2));
+                    if (distance < 3 && DataStorage.getInstance().currentIsland != null) {
+                        if (DataStorage.getInstance().rota.vazia()) {
+                            DataStorage.getInstance().currentIsland = null;
+                            entity.sendSystemMessage(Text.of("Chegou ao Destino!"), entity.getUuid());
+                        }
+                        else {
+                            DataStorage.getInstance().currentIsland = (Island)DataStorage.getInstance().rota.desenfileirar();
+                            entity.sendSystemMessage(Text.of("Próxima parada, " + DataStorage.getInstance().currentIsland.name + "!"), entity.getUuid());
+                        }
                     }
                     return Math.atan2((double) pos.getZ() - entity.getPos().z, (double) pos.getX() - entity.getPos().x);
                 }
