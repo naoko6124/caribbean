@@ -80,6 +80,7 @@ public class CaribbeanModClient implements ClientModInitializer {
                     double distance = Math.sqrt(Math.pow(xdif, 2) + Math.pow(zdif, 2));
                     if (distance < 3 && DataStorage.getInstance().currentIsland != null) {
                         if (DataStorage.getInstance().rota.vazia()) {
+                            DataStorage.getInstance().rota = null;
                             DataStorage.getInstance().currentIsland = null;
                             entity.sendSystemMessage(Text.of("Chegou ao Destino!"), entity.getUuid());
                         }
