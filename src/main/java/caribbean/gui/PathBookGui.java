@@ -35,26 +35,27 @@ public class PathBookGui extends LightweightGuiDescription {
         setRootPanel(root);
         root.setSize(256, 160);
         WSprite icon = new WSprite(new Identifier("caribbean:textures/testebg.png"));
-        root.add(icon, 0, 0, 15, 10);
+        root.add(icon, 0, 0, 17, 11);
 
-        WLabel lblTitle = new WLabel(Text.of("Path"), 0x000000);
-        root.add(lblTitle, 0, 0, 2, 1);
+        WLabel lblTitle = new WLabel(Text.of("Islands"), 0x000000);
+        lblTitle.setHorizontalAlignment(HorizontalAlignment.CENTER);
+        root.add(lblTitle, 1, 1, 6, 1);
 
         lblNome = new WLabel(Text.of("Name: "));
-        root.add(lblNome, 8, 1);
+        root.add(lblNome, 9, 1);
         lblCoords = new WLabel(Text.of("Coords: "));
-        root.add(lblCoords, 8, 2);
+        root.add(lblCoords, 9, 2);
 
         WLabel lblRota1 = new WLabel(Text.of("[1]"), 0x000000);
-        root.add(lblRota1, 8, 5, 4, 1);
+        root.add(lblRota1, 9, 5, 4, 1);
         WLabel lblRota2 = new WLabel(Text.of("[2]"), 0x000000);
-        root.add(lblRota2, 8, 6, 4, 1);
+        root.add(lblRota2, 9, 6, 4, 1);
         WLabel lblRota3 = new WLabel(Text.of("[3]"), 0x000000);
-        root.add(lblRota3, 8, 7, 4, 1);
+        root.add(lblRota3, 9, 7, 4, 1);
         WLabel lblRota4 = new WLabel(Text.of("[4]"), 0x000000);
-        root.add(lblRota4, 8, 8, 4, 1);
+        root.add(lblRota4, 9, 8, 4, 1);
         WLabel lblRota5 = new WLabel(Text.of("[5]"), 0x000000);
-        root.add(lblRota5, 8, 9, 4, 1);
+        root.add(lblRota5, 9, 9, 4, 1);
 
         btnSelecionar = new WButton(Text.of("Adicionar a Rota"));
         btnSelecionar.setEnabled(false);
@@ -83,11 +84,11 @@ public class PathBookGui extends LightweightGuiDescription {
             }
             atual++;
         });
-        root.add(btnSelecionar, 8, 3, 4, 1);
+        root.add(btnSelecionar, 9, 3, 6, 1);
 
         pnlIslands = new WPlainPanel();
         scrIslands = new WScrollPanel(pnlIslands);
-        root.add(scrIslands, 0, 1, 6, 8);
+        root.add(scrIslands, 1, 2, 6, 8);
 
         root.validate(this);
 

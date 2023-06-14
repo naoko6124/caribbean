@@ -21,9 +21,9 @@ public class CaribbeanMod implements ModInitializer {
     public static PirateCompass piratecompass = new PirateCompass(new FabricItemSettings().maxCount(1));
     public static final ArmorMaterial pirate_armor = new FabricArmorMaterial();
     public static BaseArmor pirate_helmet = new BaseArmor(pirate_armor, EquipmentSlot.HEAD);
-    public static BaseArmor pirate_chestplate = new BaseArmor(pirate_armor, EquipmentSlot.HEAD);
-    public static BaseArmor pirate_leggings = new BaseArmor(pirate_armor, EquipmentSlot.HEAD);
-    public static BaseArmor pirate_boots = new BaseArmor(pirate_armor, EquipmentSlot.HEAD);
+    public static BaseArmor pirate_chestplate = new BaseArmor(pirate_armor, EquipmentSlot.CHEST);
+    public static BaseArmor pirate_leggings = new BaseArmor(pirate_armor, EquipmentSlot.LEGS);
+    public static BaseArmor pirate_boots = new BaseArmor(pirate_armor, EquipmentSlot.FEET);
     private static final ItemGroup caribbean_group = FabricItemGroupBuilder.create(
             new Identifier("caribbean", "caribbean_group"))
             .icon(() -> new ItemStack(islands_book))
