@@ -16,7 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"caribbean.ExampleMod"
+          "caribbean.CaribbeanMod"
+		],
+		"client": [
+			"caribbean.CaribbeanModClient"
 		]
 	},
 	"mixins": [

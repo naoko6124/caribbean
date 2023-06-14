@@ -17,7 +17,8 @@ public class IslandsBook extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        MinecraftClient.getInstance().openScreen(new CottonClientScreen(new IslandsBookGui()));
+        if (world.isClient())
+            MinecraftClient.getInstance().openScreen(new CottonClientScreen(new IslandsBookGui()));
         return super.use(world, user, hand);
     }
 }

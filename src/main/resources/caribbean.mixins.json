@@ -2,8 +2,8 @@
 	"required": true,
 	"package": "caribbean.mixin",
 	"compatibilityLevel": "JAVA_16",
-	"mixins": [
-		"ExampleMixin"
+	"client": [
+      "HeldItemRendererMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -1,5 +1,10 @@
 {
   "item.caribbean.islands_book": "Islands Book",
   "item.caribbean.path_book": "Path Book",
+  "item.caribbean.piratecompass": "Pirate Compass",
+  "item.caribbean.pirate_helmet": "Pirate Helmet",
+  "item.caribbean.pirate_chestplate": "Pirate Chestplate",
+  "item.caribbean.pirate_leggings": "Pirate Leggings",
+  "item.caribbean.pirate_boots": "Pirate Boots",
   "itemGroup.caribbean.caribbean_group": "Caribbean"
 }

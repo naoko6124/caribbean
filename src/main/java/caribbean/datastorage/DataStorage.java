@@ -1,5 +1,6 @@
 package caribbean.datastorage;
 
+import caribbean.datastructures.Fila;
 import caribbean.datastructures.ListaEncadeada;
 
 public class DataStorage {
@@ -14,4 +15,7 @@ public class DataStorage {
     }
 
     public ListaEncadeada lista;
+    public Fila rota;
+
+    public Island currentIsland;
 }
