@@ -40,16 +40,8 @@ public class CaribbeanMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        Registry.register(
-                Registry.ITEM,
-                new Identifier("caribbean", "islands_book"),
-                islands_book
-        );
-        Registry.register(
-                Registry.ITEM,
-                new Identifier("caribbean", "path_book"),
-                path_book
-        );
+        Registry.register(Registry.ITEM, new Identifier("caribbean", "islands_book"), islands_book);
+        Registry.register(Registry.ITEM, new Identifier("caribbean", "path_book"), path_book);
         Registry.register(Registry.ITEM, new Identifier("caribbean", "piratecompass"), piratecompass);
         Registry.register(Registry.ITEM, new Identifier("caribbean","pirate_helmet"), pirate_helmet);
         Registry.register(Registry.ITEM, new Identifier("caribbean","pirate_chestplate"), pirate_chestplate);

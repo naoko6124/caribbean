@@ -39,7 +39,7 @@ public class FabricArmorMaterial implements ArmorMaterial {
 
     @Override
     public String getName() {
-        return null;
+        return "pirate";
     }
 
     @Override
