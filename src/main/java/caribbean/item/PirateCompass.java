@@ -23,11 +23,11 @@ public class PirateCompass extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if (world.isClient()) {
-            if (DataStorage.getInstance().rota != null && DataStorage.getInstance().currentIsland == null) {
+            if (DataStorage.getInstance().rota != null && !DataStorage.getInstance().rota.vazia() && DataStorage.getInstance().currentIsland == null) {
                 DataStorage.getInstance().currentIsland = (Island)DataStorage.getInstance().rota.desenfileirar();
                 user.sendSystemMessage(Text.of("Primeira parada, " + DataStorage.getInstance().currentIsland.name + "!"), user.getUuid());
             }
-            if (DataStorage.getInstance().rota == null) {
+            else if (DataStorage.getInstance().rota == null || DataStorage.getInstance().rota.vazia()) {
                 user.sendSystemMessage(Text.of("Sem Rota Definida!"), user.getUuid());
             }
         }
